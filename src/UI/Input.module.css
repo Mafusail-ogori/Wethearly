@@ -1,0 +1,76 @@
+.inputField, .errorInput{
+    display: flex;
+    width: 100%;
+    z-index: 2;
+    color: #7e7e7e;
+    -webkit-transition: 0.5s;
+    transition: 0.5s;
+    box-shadow: rgba(0, 0, 0, 0.25) 2px -2px 3px;
+    outline: none;
+    padding-left: 10%;
+    border-radius: 20px;
+    resize: none;
+    border: none;
+}
+
+.input_container{
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+}
+
+.inputField{
+    background-color: white;
+}
+
+.inputField::placeholder{
+    font-size: 15px;
+    color: #C4C5C7;
+}
+
+.inputField:hover{
+    -webkit-transition: 0.5s;
+    transition: 0.5s;
+    background-color: #D0511B;
+    color: white;
+    transform: scale(1.05);
+}
+
+.inputField:hover::placeholder{
+    color: white;
+}
+
+.errorInput{
+    background-color: black;
+    color: white;
+}
+
+.label_text{
+    font-size: 15px;
+    color: #3a3a3a;
+    margin-right: auto;
+    padding-left: 10%;
+}
+
+input[type="file"]::file-selector-button {
+    cursor: default;
+    height: 100%;
+    position:absolute;
+    top: 0;
+    right: 0;
+    opacity: 0;
+    -moz-opacity: 0;
+    filter:progid:DXImageTransform.Microsoft.Alpha(opacity=0)
+}
+
+.option {
+    background-color: black;
+    color: white;
+    transition: 300ms;
+}
+
+.option:hover {
+    background-color: white;
+    color: black;
+}

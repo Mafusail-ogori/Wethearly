@@ -1,0 +1,29 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@500&display=swap');
+
+@keyframes appearance {
+  0%{
+    opacity: 0;
+    transform: translateY(-3rem);
+  }
+  100%{
+    opacity: 100%;
+    transform: translateY(0);
+  }
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  scroll-behavior: smooth;
+  animation-name: appearance;
+  animation-duration: 1s;
+  animation-iteration-count: initial;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
+  font-family: 'Inter', sans-serif;
+}
