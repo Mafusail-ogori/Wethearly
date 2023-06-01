@@ -1,10 +1,9 @@
-import styles from "../Modal.module.css";
-import stylesLogo from "../../../../../RGR/Wetherly/src/components/Header.module.css";
-import Input from "../../UI/Input";
-import Button from "../../UI/Button";
+import styles from "./Modal.module.css";
+import stylesLogo from "../components/Header.module.css";
+import Input from "../UI/Input";
+import Button from "../UI/Button";
 import {useState} from "react";
 import axios from "axios";
-import Backdrop from "../../UI/Backdrop";
 
 const ModalSignUp = (props) => {
     const [mail, setMail] = useState("")

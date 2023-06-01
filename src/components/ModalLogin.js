@@ -1,12 +1,12 @@
-import styles from "../Modal.module.css"
-import stylesLogo from "../../../../../RGR/Wetherly/src/components/Header.module.css"
-import Input from "../../UI/Input"
-import Button from "../../UI/Button"
+import styles from "./Modal.module.css"
+import stylesLogo from "../components/Header.module.css"
+import Input from "../UI/Input"
+import Button from "../UI/Button"
 import {NavLink, useNavigate} from "react-router-dom";
 import axios from "axios";
 import localStorage from "localStorage";
 import {useContext, useState} from "react";
-import {AuthContext} from "../../storage/AuthContext";
+import {AuthContext} from "../storage/AuthContext";
 
 const ModalLogin = (props) => {
 
@@ -63,10 +63,6 @@ const ModalLogin = (props) => {
         <p className={styles.modal_signUp_text}>Немаєте акаунту? Ви завжди можете створити новий <a
             onClick={props.openSignUpModal} className={styles.link}>ТУТ!</a></p>
         <Button type="submit" text="ПІДТВЕРДИТИ"/>
-        <p className={styles.modal_signUp_text}>Бажаєте увійти як компанія? Перейдіть
-            <NavLink onClick={props.onClose} to='/create-company'
-                     className={styles.link}> СЮДИ!</NavLink>
-        </p>
     </form>
 }
 

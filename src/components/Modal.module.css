@@ -41,6 +41,7 @@
     z-index: 100;
     -webkit-transition: 0.5s;
     transition: 0.5s;
+    padding: 60px;
 }
 
 .modal_login {
