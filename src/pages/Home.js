@@ -31,7 +31,7 @@ const Home = () => {
                 {role  === 'user' && <Button text = "Add to favourites"/>}
             </FormCard>
         </ContentCard>
-        <ContentCard backgroundImg = {secondCardBack} height = "700px">
+        <ContentCard backgroundImg = {secondCardBack} height = "800px">
             <FormCard>
                 <img className={classes.header_logo} src={logo} alt="Image Not Found"/>
                 <p className={styles.title_text}>Deep details</p>
