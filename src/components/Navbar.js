@@ -7,6 +7,8 @@ import axios from "axios";
 import {DataContext} from "../storage/DataStorage";
 import ReactDOM from "react-dom";
 import Modal from "./Modal";
+import userLogo from '../assets/icons/userIcon.png'
+import classes from '../components/Header.module.css'
 
 const Navbar = () => {
     const {role, setRole} = useContext(AuthContext)
@@ -76,9 +78,9 @@ const Navbar = () => {
             <Input height="45px" placeholder="Пошук" type="text" fontSize="15px"
                    status={true} handler = {cityInputHandler} value = {cityInput} onKeyPress = {searchLocation}/>
             <NavbarItem className={"fa-solid fa-heart navbar_item_icon"} title="Liked" link="/choosed"/>
-
+            <img src = {userLogo} style = {{width : '45px', height: '45px'}}/>
             <NavbarItem className={"ffa-sharp fa-solid fa-arrow-right-from-bracket navbar_item_icon"}
-                        title="Sign Out" buttonClickHandler={logOutHandler}/>
+                        title="SignOut" buttonClickHandler={logOutHandler}/>
         </>}
     </div>
 }

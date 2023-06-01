@@ -9,10 +9,13 @@ import classes from '../components/Header.module.css'
 import HourForecastCard from "../UI/HourForecastCard";
 import {DataContext} from "../storage/DataStorage";
 import {useContext} from "react";
+import {AuthContext} from "../storage/AuthContext";
+import Button from "../UI/Button";
 
 
 const Home = () => {
     const {data} = useContext(DataContext)
+    const{role} = useContext(AuthContext)
     console.log('Here', data)
     return <div className={styles.wrapper}>
         <ContentCard backgroundImg = {cardBack} height = "700px">
@@ -25,6 +28,7 @@ const Home = () => {
                         return <HourForecastCard temperature = {hourForecast.main.temp_max} hour = {hourForecast.dt_txt.split(' ')[1]} weatherState = {hourForecast.weather[0].description} windSpeed = {hourForecast.wind.speed}/>
                     })}
                 </div>
+                {role  === 'user' && <Button text = "Add to favourites"/>}
             </FormCard>
         </ContentCard>
         <ContentCard backgroundImg = {secondCardBack} height = "700px">
