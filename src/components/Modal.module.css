@@ -1,0 +1,116 @@
+@keyframes appearance {
+    0% {
+        opacity: 0;
+        transform: translate(-50%, -60%);
+    }
+    100% {
+        opacity: 100%;
+        transform: translate(-50%, -50%);
+    }
+}
+
+@keyframes messageApperance {
+    0% {
+        opacity: 0%;
+        transform: translateY(-3rem);
+    }
+    100% {
+        opacity: 100%;
+        transform: translateY(0);
+    }
+}
+
+.modal_login, .modal_signUp {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    animation-name: appearance;
+    animation-duration: 0.5s;
+    animation-iteration-count: initial;
+    background-color: white;
+    gap: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    font-size: 30px;
+    border-radius: 20px;
+    box-shadow: rgba(0, 0, 0, 0.25) 0 10px 5px;
+    z-index: 100;
+    -webkit-transition: 0.5s;
+    transition: 0.5s;
+}
+
+.modal_login {
+    height: 80%;
+    width: 35%;
+}
+
+.modal_signUp {
+    height: 100%;
+    width: 35%;
+}
+
+.modal_signUp_text {
+    color: #535353;
+    font-size: 13px;
+    font-weight: lighter;
+}
+
+.link {
+    color: #8194FF;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.hidden {
+    display: none;
+    color: transparent;
+    height: 0;
+    width: 0;
+    opacity: 0;
+    overflow: hidden;
+    line-height: 0;
+    padding: 0;
+    margin: 0;
+}
+
+.failure, .success {
+    animation-name: messageApperance;
+    animation-duration: 300ms;
+    font-size: 15px;
+    padding: 10px;
+    border-radius: 5px;
+    font-weight: lighter;
+}
+
+.failure {
+    border: 1px solid red;
+}
+
+.success {
+    border: 1px solid #66DC56FF;
+    text-align: center;
+}
+
+@media only screen and (max-width: 1200px) {
+    .modal_login, .modal_signUp {
+        width: 70%;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .modal_login, .modal_signUp {
+        width: 95%;
+    }
+}
+
+.label_text {
+    text-align: left;
+    font-size: 15px;
+    color: #3a3a3a;
+    margin-right: auto;
+    padding-left: 10%;
+}
